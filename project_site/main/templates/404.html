@@ -1,0 +1,33 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contacts.css' %}">
+{% endblock %}
+
+{% block title %}
+Гермес Консалтинг – Уменьшаем вашу налоговую нагрузку законно
+{% endblock %}
+
+{% block head_links %}
+<a href="{% url 'contacts' %}" class="link">Контакты</a>
+<a href="{% url 'reviews' %}" class="link">Отзывы</a>
+<a href="{% url 'home' %}"  class="link">Главная страница</a>
+{% endblock %}
+
+{% block content %}
+<div class="title_block">
+    <div class="content_block" style="text-align: center;">
+        <h1 style="max-width: 650px;">Cтраница не существует</h1>
+
+    </div>
+</div>
+
+<style>
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
+</style>
+
+{% endblock %}

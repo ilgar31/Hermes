@@ -1,0 +1,236 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/index.js' %}" defer></script>
+{% endblock %}
+
+{% block title %}
+Гермес Консалтинг – Уменьшаем вашу налоговую нагрузку законно
+{% endblock %}
+
+{% block head_links %}
+<a href="{% url 'contacts' %}" class="link">Контакты</a>
+<a href="{% url 'reviews' %}" class="link">Отзывы</a>
+<a href="{% url 'home' %}" class="link active_link">Главная страница</a>
+{% endblock %}
+
+{% block content %}
+<div class="title_block">
+    <div class="content_block">
+        <div class="title_block_text">
+            <h1>Законными способами снизим налоговую нагрузку</h1>
+            <p>Более 10 лет помогаем компаниям сокращать налоги легально!</p>
+            <button onclick="location.href='{% url 'contacts' %}';">Связаться с нами</button>
+        </div>
+        <div class="title_contact">
+            <p>Связаться с консультантом</p>
+            <a href="tel:{{ number }}">{{ number }}</a>
+            <button onclick="location.href='#call';">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</button>
+        </div>
+    </div>
+</div>
+
+<div class="about_block">
+    <div class="content_help_block">
+        <div class="about_block_text">
+            <h1>Наши услуги</h1>
+            <p>Основные направления деятельности</p>
+        </div>
+        <div class="help_blocks">
+            <div class="help_block">
+                <div class="head_help_block">
+                    <h1>Снижение налоговой нагрузки</h1>
+                </div>
+                <div class="body_help_block">
+                    <div class="body_help_block_content">
+                        <h2>Снижение налогооблагаемой базы</h2>
+                        <p>Предлагаем законные и проверенные методы для сокращения налогооблагаемой базы как текущего, так и прошлых отчетных периодов.</p>
+                        <h2>Гибкие условия оплаты</h2>
+                        <p>Оплата услуг происходит только после подтверждения от ИФНС, возможна рассрочка для постоянных клиентов.</p>
+                        <h2>Соответствие законодательству</h2>
+                        <p>Наша деятельность полностью соответствует законодательству Российской Федерации.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="help_block">
+                <div class="head_help_block">
+                    <h1>Документы и конфиденциальность</h1>
+                </div>
+                <div class="body_help_block">
+                    <div class="body_help_block_content">
+                        <h2>Широкий перечень ОКВЭД</h2>
+                        <p>Мы работаем с широким спектром кодов ОКВЭД, что позволяет предлагать решения для различных отраслей бизнеса.</p>
+                        <h2>Закрывающие документы</h2>
+                        <p>Гарантируем своевременное предоставление всех необходимых документов: сканы, печати, подписи, коммерческие предложения.</p>
+                        <h2>Конфиденциальность</h2>
+                        <p>Мы обеспечиваем полную конфиденциальность всех данных и информации наших клиентов.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="help_block">
+                <div class="head_help_block">
+                    <h1>Опыт и гибкость</h1>
+                </div>
+                <div class="body_help_block">
+                    <div class="body_help_block_content">
+                        <h2>Более 10 лет на рынке</h2>
+                        <p>Наш многолетний опыт позволяет эффективно решать сложные налоговые и финансовые задачи.</p>
+                        <h2>Гибкая система расчетов</h2>
+                        <p>Предлагаем различные формы оплаты, включая возможность рассрочки для постоянных клиентов.</p>
+                        <h2>Решения для любого бизнеса</h2>
+                        <p>Мы работаем с предприятиями разных масштабов и отраслей, предоставляя индивидуальные решения для каждого клиента.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="help_block">
+                <div class="head_help_block">
+                    <h1>Поддержка 24/7</h1>
+                </div>
+                <div class="body_help_block second_type_help_block">
+                    <div class="body_help_block_content">
+                        <h2>Непрерывная поддержка</h2>
+                        <p>Наши специалисты всегда на связи и готовы ответить на ваши вопросы в любое время дня и ночи.</p>
+                        <h2>Быстрая выдача номеров</h2>
+                        <p>Предоставляем номера оперативно, чтобы вы могли быстро решать свои задачи.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact_us1">
+    <div class="contact_us1_content">
+        <div class="contact_us1_first_block">
+            <div class="contact_us1_text">
+                <h1>Не нашли нужную услугу?</h1>
+                <p>Оставьте заявку, и мы подберем для вас оптимальное решение. Мы всегда готовы помочь и ответить на любые вопросы.</p>
+            </div>
+            <div class="contact_us1_number">
+                <div class="line"></div>
+                <div class="contact_us1_number_text">
+                    <p>Связаться с консультантом</p>
+                    <a href="tel:{{ number }}">{{ number }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact_us1_second_block">
+            <form method="post" class="form_block">
+                {% csrf_token %}
+                <input id='name1' name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" autocomplete="off" required>
+                <input id='number1' name="number" type="tel" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" autocomplete="off" required><br>
+                <button type="button" class="continue_button" onclick="first_contact_block()">Отправить</button>
+            </form>
+            <p>Нажимая кнопку "Отправить", Вы соглашаетесь с <a href="{% url 'personal_data' %}">политикой обработки ПД</a> </p>
+        </div>
+    </div>
+</div>
+
+<div class="why_we">
+    <div class="why_we_content">
+        <h1>Почему стоит выбрать нас?</h1>
+        <div class="why_we_grid">
+            <div class="why_we_block">
+                <h2>10 лет опыта</h2>
+                <div class="why_we_block_text">
+                    Мы более 10 лет на рынке, успешно помогаем бизнесам снижать налоги и оптимизировать финансовые процессы.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Гарантии результата</h2>
+                <div class="why_we_block_text">
+                    Оплата производится только после подтверждения ИФНС. Мы предлагаем гибкую систему расчетов, включая рассрочку для постоянных клиентов.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Конфиденциальность и безопасность</h2>
+                <div class="why_we_block_text">
+                    Мы соблюдаем строгие стандарты конфиденциальности, обеспечивая безопасность ваших данных и документов.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Поддержка 24/7</h2>
+                <div class="why_we_block_text">
+                    Наша команда всегда на связи и готова помочь вам круглосуточно по любому удобному каналу связи.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Широкий спектр услуг</h2>
+                <div class="why_we_block_text">
+                    Мы предоставляем решения для различных сфер бизнеса и работаем с широким перечнем ОКВЭД.
+                </div>
+            </div>
+            <div class="why_we_block">
+                <h2>Долгосрочное сотрудничество</h2>
+                <div class="why_we_block_text">
+                    Мы нацелены на долговременные и взаимовыгодные партнерства, стремимся к успеху каждого клиента.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="how_we_work">
+    <div class="how_we_work_content">
+        <h1>Как мы работаем?</h1>
+        <div class="how_we_work_info">
+            Мы предлагаем четко структурированный процесс, который гарантирует качественное и быстрое решение ваших вопросов.
+        </div>
+        <div class="how_we_work_block">
+            <img src="{% static 'png/steps.png' %}" class="steps">
+            <img src="{% static 'png/steps2.png' %}" class="steps2">
+            <div class="how_we_work_body">
+                <div class="how_we_work_item">
+                    <h2>Обращение к нам</h2>
+                    <p>Вы можете связаться с нами через телефон, сайт или e-mail.</p>
+                </div>
+                <div class="how_we_work_item">
+                    <h2>Предоставление вариантов</h2>
+                    <p>Мы предложим вам несколько вариантов решения проблемы, основываясь на вашем запросе.</p>
+                </div>
+                <div class="how_we_work_item">
+                    <h2>Оформление документов</h2>
+                    <p>Мы подготовим все необходимые документы и согласуем их с вами.</p>
+                </div>
+                <div class="how_we_work_item">
+                    <h2>Решение и результат</h2>
+                    <p>Вы получите результат, подтвержденный ИФНС и документально оформленный.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact_us1" style="margin-top: 20px;" id="call">
+    <div class="contact_us1_content">
+        <div class="contact_us1_first_block" style="height: 300px;">
+            <div class="contact_us1_text">
+                <h1>Готовы обратиться к нам прямо сейчас?</h1>
+                <p>Оставьте заявку, и мы оперативно свяжемся с вами, после чего подберем специалиста в нужной области права.</p>
+            </div>
+            <div class="contact_us1_number">
+                <div class="line"></div>
+                <div class="contact_us1_number_text">
+                    <p>Связаться с нами</p>
+                    <a href="tel:{{ number }}">{{ number }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact_us1_second_block">
+            <form method="post" class="form_block">
+                {% csrf_token %}
+                <input id='name2' name="name" type="text" placeholder="Ваше имя" maxlength="40" size="30" class="input_form" autocomplete="off" required>
+                <input id='number2' name="number" type="text" placeholder="Ваш номер телефона" maxlength="30" size="30" class="input_form" autocomplete="off" required><br>
+                <button type="button" class="continue_button" onclick="second_contact_block()">Отправить</button>
+            </form>
+            <p>Нажимая кнопку "Отправить", Вы соглашаетесь с <a href="{% url 'personal_data' %}">политикой обработки ПД</a> </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

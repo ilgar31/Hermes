@@ -1,0 +1,144 @@
+.title_block {
+    width: 100%;
+    height: 300px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-image: url("../png/background.png");
+    background-size: cover;
+}
+
+.content_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 900px;
+    margin: auto;
+}
+
+.content_block h1 {
+    font-family: Inter, sans-serif;
+    font-size: 50px;
+    color: white;
+    font-weight: 500;
+    max-width: 550px;
+}
+
+
+@media screen and (max-width: 1000px){
+    .content_block {
+        width: 100%;
+    }
+
+    .title_block {
+        height: 250px;
+    }
+
+    .content_block h1 {
+        margin-block-start: 0;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .title_block {
+        height: 200px;
+    }
+
+    .title_contact {
+        height: 150px;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 30px;
+    }
+
+    .content_block h1 {
+        font-size: 35px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .title_block {
+        height: 220px;
+    }
+
+    .title_contact {
+        height: 140px;
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 20px;
+    }
+
+    .content_block h1 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 340px){
+    .title_block {
+        background-image: url("../png/mobile_background.png");
+    }
+}
+
+
+.personal_data {
+    width: 100%;
+    margin-top: 35px;
+    height: auto;
+}
+
+.personal_data_content {
+    width: 990px;
+    margin: auto;
+    height: auto;
+}
+
+.personal_data_content h1 {
+    font-family: Inter, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.personal_data_content p {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1000px){
+    .personal_data {
+        margin-top: 25px;
+    }
+
+    .personal_data_content {
+        width: 95%;
+    }
+
+    .personal_data_content h1 {
+        font-size: 24px;
+    }
+
+    .personal_data_content p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .personal_data {
+        margin-top: 20px;
+    }
+
+    .personal_data_content {
+        width: 95%;
+    }
+
+    .personal_data_content h1 {
+        font-size: 20px;
+    }
+
+    .personal_data_content p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,57 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contacts.css' %}">
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/contact.js' %}" defer></script>
+{% endblock %}
+
+{% block title %}
+Гермес Консалтинг – Уменьшаем вашу налоговую нагрузку законно
+{% endblock %}
+
+{% block head_links %}
+<a href="{% url 'contacts' %}" class="link active_link">Контакты</a>
+<a href="{% url 'reviews' %}" class="link">Отзывы</a>
+<a href="{% url 'home' %}"  class="link">Главная страница</a>
+{% endblock %}
+
+{% block content %}
+<div class="title_block">
+    <div class="content_block">
+        <h1>Связаться с нами</h1>
+    </div>
+</div>
+
+<div class="contact">
+    <div class="contact_content">
+        <div class="contact_block1">
+            <h1>Остались вопросы о работе нашей компании или вариантах сотрудничества?</h1>
+            <p>Первый шаг к решению проблемы - действие. Оставьте заявку, и наш специалист свяжется с вами в ближайшее время.</p>
+            <form method="POST" class="contact_form" autocomplete="off">
+                {% csrf_token %}
+                <input id='name' name="name" type="search" placeholder="ФИО" maxlength="45" size="30" class="input_form" required>
+                <input id='number' name="number" type="search" placeholder="Номер телефона" maxlength="45" size="30" class="input_form" required>
+                <input id='email' name="email" type="search" placeholder="Email" maxlength="45" size="30" class="input_form"  required>
+                <textarea id='message' name="review" placeholder="Сообщение" maxlength="1500" size="30" class="input_form input_review" required></textarea>
+                <div>
+                    <input type="checkbox" id="agreement" name="agreement">
+                    <label for="agreement">Нажимая кнопку "Отправить", Вы соглашаетесь с <a href="{% url 'personal_data' %}" style="color: #494949">политикой обработки ПД</a></label>
+                </div>
+                <button type='button' class="continue_button" onclick="send_message()">Отправить</button>
+            </form>
+        </div>
+        <div class="contact_block2">
+            <h2 style="margin-bottom: 20px;">Контактные данные</h2>
+            {% if address %}
+                <p>{{ address }}</p>
+            {% endif %}
+            <a href="tel:{{ number }}">{{ number }}</a>
+            <a href="mailto:{{ mail }}">{{ mail }}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
